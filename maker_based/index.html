@@ -23,20 +23,21 @@
                    shadowCameraVisible: true;" position="-5 3 1.5"></a-entity>
     <a-assets>
       <a-asset-item id="gltf-asset"
-        src="https://cdn.glitch.global/e11b3257-2106-4c15-bcda-1d3ba7d705d6/chair.gltf?v=1695375303645"></a-asset-item>
-      <!-- <video id="usagohan" autoplay loop="true" src="assets//usagohan.mp4"></video> -->
+        src="https://cdn.glitch.global/e11b3257-2106-4c15-bcda-1d3ba7d705d6/chair_y.gltf?v=1695605581687"></a-asset-item>
+      <video id="usagohan" autoplay loop="true" src="assets//usagohan.mp4"></video>
     </a-assets>
 
     <a-marker id="gltf-marker" type="pattern" preset="custom" url="assets/pattern-chair.patt"
       raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-      <a-entity position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 -90 0" animation-mixer="loop: repeat"
+      <!-- <a-entity position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 -90 0" animation-mixer="loop: repeat"
+        gltf-model="#gltf-asset" class="clickable" gesture-handler></a-entity> -->
+      <a-entity position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 0 0" animation-mixer="loop: repeat"
         gltf-model="#gltf-asset" class="clickable" gesture-handler></a-entity>
     </a-marker>
 
     <a-marker id="video-marker" type="pattern" preset="custom" url="assets/pattern-usagohan.patt"
       raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-      <a-video src="https://cdn.glitch.global/e11b3257-2106-4c15-bcda-1d3ba7d705d6/usagohan.mp4?v=1695605397548"
-        width="16" height="9" position="0 0 0"></a-video>
+      <a-video src="#usagohan" width="16" height="9" position="0 0 0"></a-video>
     </a-marker>
 
     <a-entity camera></a-entity>
