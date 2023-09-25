@@ -42,7 +42,6 @@
     <a-assets>
       <a-asset-item id="gltf-asset"
         src="https://cdn.glitch.global/e11b3257-2106-4c15-bcda-1d3ba7d705d6/chair.gltf?v=1695375303645"></a-asset-item>
-      <!-- <video id="usagohan" autoplay loop="true" src="assets//usagohan.mp4"></video> -->
       <video id="usagohan" src="assets/usagohan.mp4" preload="auto" response-type="arraybuffer" loop crossorigin
         webkit-playsinline autoplay muted playsinline></video>
     </a-assets>
@@ -51,14 +50,11 @@
       raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
       <a-entity position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 -90 0" animation-mixer="loop: repeat"
         gltf-model="#gltf-asset" class="clickable" gesture-handler></a-entity>
-      <!-- <a-entity position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 0 0" animation-mixer="loop: repeat"
-        gltf-model="#gltf-asset" class="clickable" gesture-handler></a-entity> -->
     </a-marker>
 
     <a-marker id="video-marker" type="pattern" preset="custom" url="assets/pattern-usagohan.patt"
       raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-      <!-- <a-video src="#usagohan" width="16" height="9" position="0 0 0" scale="0.1.5 0.1.5 0.1.5"
-        rotation="0 0 0"></a-video> -->
+      <!-- <a-video src="#usagohan" width="16" height="9" position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 0 0"></a-video> -->
       <a-video src="#usagohan" scale="1 1 1" position="0 0.1 0" rotation="-90 0 0" class="clickable"
         gesture-handler></a-video>
     </a-marker>
