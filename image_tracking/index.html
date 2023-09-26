@@ -37,12 +37,32 @@
   <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true; precision: medium;" embedded
     arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
-    <!-- use rawgithack to retrieve the correct url for nft marker (see 'trex' below) -->
-    <a-nft type='nft' url='https://www.hsiao-li.com/WebAR/image_tracking/assets/paint' smooth='true' smoothCount='10'
+    <!-- [deployed on web server] -->
+    <!-- use absolute path consistent with the domain -->
+
+    <a-nft type='nft' url='https://www.hsiao-li.com/WebAR/image_tracking/assets/food' smooth='true' smoothCount='10'
       smoothTolerance='0.01' smoothThreshold='5'>
-      <a-entity gltf-model='assets/chair.gltf' position="0 0 0" scale="0.1.5 0.1.5 0.1.5" rotation="0 -90 90">
+      <a-entity gltf-model='https://www.hsiao-li.com/WebAR/image_tracking/assets/chair.gltf' position="0 0 0"
+        scale="10 10 10" rotation="0 -90 90">
       </a-entity>
     </a-nft>
+
+    <a-nft type='nft' url='https://www.hsiao-li.com/WebAR/image_tracking/assets/paint' smooth='true' smoothCount='10'
+      smoothTolerance='0.01' smoothThreshold='5'>
+      <a-entity gltf-model='https://www.hsiao-li.com/WebAR/image_tracking/assets/chair.gltf' position="0 0 0"
+        scale="10 10 10" rotation="0 -90 90">
+      </a-entity>
+    </a-nft>
+
+    <!-- [test in local environment] -->
+    <!-- for ntf use ip/localhost:port + hostname + path -->
+    <!-- for AR contents use ip/localhost:port  + path -->
+    <!-- <a-nft type='nft' url='image_tracking/assets/paint' smooth='true' smoothCount='10' smoothTolerance='0.01'
+      smoothThreshold='5'>
+      <a-entity gltf-model='image_tracking/assets/chair.gltf' position="0 0 0" scale="10 10 10" rotation="0 -90 90">
+      </a-entity>
+    </a-nft> -->
+
     <a-entity camera></a-entity>
   </a-scene>
 </body>
